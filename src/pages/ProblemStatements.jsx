@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function ProblemStatements() {
   const [expandedProblem, setExpandedProblem] = useState(null);
@@ -10,6 +11,7 @@ export default function ProblemStatements() {
       code: 'AESS',
       name: 'Aerospace and Electronic Systems Society',
       color: 'border-blue-600 text-blue-400',
+      logo: '/logos/aess.png',
       problems: [
         {
           id: 'AESS-1',
@@ -56,6 +58,7 @@ export default function ProblemStatements() {
       code: 'SPS',
       name: 'Signal Processing Society',
       color: 'border-purple-600 text-purple-400',
+      logo: '/logos/sps.png',
       problems: [
         {
           id: 'SPS-1',
@@ -102,6 +105,7 @@ export default function ProblemStatements() {
       code: 'CAS',
       name: 'Circuits and Systems Society',
       color: 'border-green-600 text-green-400',
+      logo: '/logos/cas.png',
       problems: [
         {
           id: 'CAS-1',
@@ -148,6 +152,7 @@ export default function ProblemStatements() {
       code: 'APS',
       name: 'Antennas and Propagation Society',
       color: 'border-cyan-600 text-cyan-400',
+      logo: '/logos/aps.png',
       problems: [
         {
           id: 'APS-1',
@@ -194,6 +199,7 @@ export default function ProblemStatements() {
       code: 'MTTS',
       name: 'Microwave Theory and Techniques Society',
       color: 'border-orange-600 text-orange-400',
+      logo: '/logos/mtts.jpg',
       problems: [
         {
           id: 'MTTS-1',
@@ -240,6 +246,7 @@ export default function ProblemStatements() {
       code: 'COMSOC',
       name: 'Communications Society',
       color: 'border-indigo-600 text-indigo-400',
+      logo: '/logos/comsoc.png',
       problems: [
         {
           id: 'COMSOC-1',
@@ -286,6 +293,7 @@ export default function ProblemStatements() {
       code: 'CIS',
       name: 'Computational Intelligence Society',
       color: 'border-pink-600 text-pink-400',
+      logo: '/logos/cis.jpg',
       problems: [
         {
           id: 'CIS-1',
@@ -332,6 +340,7 @@ export default function ProblemStatements() {
       code: 'CS',
       name: 'Computer Society',
       color: 'border-red-600 text-red-400',
+      logo: '/logos/cs.png',
       problems: [
         {
           id: 'CS-1',
@@ -378,6 +387,7 @@ export default function ProblemStatements() {
       code: 'EMBS',
       name: 'Engineering in Medicine and Biology Society',
       color: 'border-teal-600 text-teal-400',
+      logo: '/logos/embs.png',
       problems: [
         {
           id: 'EMBS-1',
@@ -424,6 +434,7 @@ export default function ProblemStatements() {
       code: 'ITS',
       name: 'Intelligent Transportation Systems Society',
       color: 'border-yellow-600 text-yellow-400',
+      logo: '/logos/its.png',
       problems: [
         {
           id: 'ITS-1',
@@ -470,6 +481,7 @@ export default function ProblemStatements() {
       code: 'PHOTON',
       name: 'Photonics Society',
       color: 'border-lime-600 text-lime-400',
+      logo: '/logos/photon.jpeg',
       problems: [
         {
           id: 'PHOTON-1',
@@ -516,6 +528,7 @@ export default function ProblemStatements() {
       code: 'PES',
       name: 'Power & Energy Society',
       color: 'border-emerald-600 text-emerald-400',
+      logo: '/logos/pes.png',
       problems: [
         {
           id: 'PES-1',
@@ -562,6 +575,7 @@ export default function ProblemStatements() {
       code: 'RAS',
       name: 'Robotics and Automation Society',
       color: 'border-violet-600 text-violet-400',
+      logo: '/logos/Ras.png',
       problems: [
         {
           id: 'RAS-1',
@@ -686,6 +700,32 @@ export default function ProblemStatements() {
       ))}
 
       <div className="container mx-auto px-4 relative z-10">
+        {/* Student Innovation Banner */}
+        <div className="mb-12 fade-in">
+          <Link to="/student-innovation">
+            <div className="bg-gradient-to-r from-ice-400/20 via-ice-300/10 to-ice-400/20 border-2 border-ice-400/50 p-6 md:p-8 hover:border-ice-300 transition-all duration-300 group cursor-pointer backdrop-blur-sm">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                <div className="flex items-center gap-4">
+                  <div className="text-4xl md:text-5xl">💡</div>
+                  <div className="text-center md:text-left">
+                    <h2 className="text-2xl md:text-3xl font-bold text-slate-100 mb-2 group-hover:text-ice-200 transition-colors duration-300">
+                      Got Your Own Innovation?
+                    </h2>
+                    <p className="text-slate-300 text-sm md:text-base">
+                      2nd & 3rd year students with exceptional projects can apply for IEEE support • Mentorship • Funding • Resources
+                    </p>
+                  </div>
+                </div>
+                <div className="shrink-0">
+                  <span className="px-6 py-3 bg-slate-800 border-2 border-ice-400/50 text-slate-100 font-bold tracking-wider group-hover:bg-slate-700 group-hover:border-ice-300 transition-all duration-300 inline-block">
+                    APPLY NOW →
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Link>
+        </div>
+
         {/* Header */}
         <div className="text-center mb-16 fade-in">
           <div className="mb-6 flex justify-center">
@@ -762,12 +802,19 @@ export default function ProblemStatements() {
               {/* Society Header */}
               <div className="mb-6">
                 <div className="flex flex-col md:flex-row md:items-center gap-3 md:gap-4 mb-2">
-                  <span className={`px-4 py-2 border-2 ${society.color} font-bold tracking-wider text-base md:text-lg inline-block w-fit`}>
-                    {society.code}
-                  </span>
-                  <h2 className="text-xl md:text-3xl font-bold text-slate-200 tracking-wide">
-                    {society.name}
-                  </h2>
+                  <img 
+                    src={society.logo} 
+                    alt={`${society.name} logo`}
+                    className="w-16 h-16 md:w-20 md:h-20 object-contain bg-white rounded-lg p-2 border-2 border-slate-700 hover:border-slate-500 transition-all duration-300"
+                  />
+                  <div className="flex flex-col">
+                    <span className="text-xs md:text-sm text-slate-500 tracking-wider font-semibold mb-1">
+                      {society.code}
+                    </span>
+                    <h2 className="text-xl md:text-3xl font-bold text-slate-200 tracking-wide">
+                      {society.name}
+                    </h2>
+                  </div>
                 </div>
                 <div className="w-full h-px bg-slate-800 mt-4" />
               </div>

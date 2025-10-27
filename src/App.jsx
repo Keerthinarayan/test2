@@ -9,6 +9,7 @@ import Register from "./pages/Register";
 import Gallery from "./pages/Gallery";
 import ProblemStatements from "./pages/ProblemStatements";
 import FAQ from "./pages/FAQ";
+import StudentInnovation from "./pages/StudentInnovation";
 import ScrollToTop from "./component/ScrollToTop";
 
 function WinterOfProjects() {
@@ -38,6 +39,7 @@ export default function App() {
         <Route path="/" element={<Layout><WinterOfProjects /></Layout>} />
         <Route path="/timeline" element={<Layout><Timeline /></Layout>} />
         <Route path="/problems" element={<Layout><ProblemStatements /></Layout>} />
+        <Route path="/student-innovation" element={<Layout><StudentInnovation /></Layout>} />
         <Route path="/gallery" element={<Layout><Gallery /></Layout>} />
         <Route path="/faq" element={<Layout><FAQ /></Layout>} />
         <Route path="/register" element={<Layout><Register /></Layout>} />
