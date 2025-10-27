@@ -9,6 +9,7 @@ export default function Header() {
     { name: 'HOME', path: '/' },
     { name: 'TIMELINE', path: '/timeline' },
     { name: 'PROBLEM STATEMENTS', path: '/problems' },
+    { name: 'STUDENT INNOVATION', path: '/student-innovation' },
     { name: 'GALLERY', path: '/gallery' },
     { name: 'FAQ', path: '/faq' },
     { name: 'REGISTER NOW', path: '/register' },

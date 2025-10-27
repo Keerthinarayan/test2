@@ -35,7 +35,7 @@ export default function Timeline() {
   ];
 
   return (
-    <div className="relative bg-gradient-to-b from-slate-900 to-black text-white py-20 px-4">
+    <div className="relative bg-linear-to-b from-slate-900 to-black text-white py-20 px-4">
       <style>{`
         @import url('https://fonts.cdnfonts.com/css/game-of-thrones');
 
@@ -64,15 +64,12 @@ export default function Timeline() {
 
         @keyframes snowFall {
           0% {
-            transform: translateY(-10px) rotate(0deg);
-            opacity: 0;
-          }
-          50% {
-            opacity: 1;
+            transform: translateY(-10vh) translateX(0) rotate(0deg);
+            opacity: 0.8;
           }
           100% {
-            transform: translateY(10px) rotate(360deg);
-            opacity: 0;
+            transform: translateY(100vh) translateX(20px) rotate(360deg);
+            opacity: 0.3;
           }
         }
 
@@ -93,31 +90,28 @@ export default function Timeline() {
 
         .snowflake {
           position: absolute;
-          top: -10px;
-          color: rgba(255, 255, 255, 0.6);
-          font-size: 6px;
-          animation: snowFall 8s linear infinite;
+          top: -10vh;
+          color: rgba(255, 255, 255, 0.8);
+          font-size: 1em;
+          animation: snowFall linear infinite;
           pointer-events: none;
-          z-index: -1;
-        }
-
-        @media (min-width: 1024px) {
-          .snowflake {
-            display: none;
-          }
+          z-index: 1;
+          text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
         }
       `}</style>
 
-      {/* Subtle Snowfall - Mobile Only */}
-      <div className="lg:hidden absolute top-0 left-0 w-full h-4 overflow-hidden pointer-events-none">
-        {[...Array(8)].map((_, i) => (
+      {/* Snowfall Effect */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(60)].map((_, i) => (
           <div
             key={i}
             className="snowflake"
             style={{
               left: `${Math.random() * 100}%`,
+              animationDuration: `${Math.random() * 5 + 8}s`,
               animationDelay: `${Math.random() * 8}s`,
-              animationDuration: `${6 + Math.random() * 4}s`
+              fontSize: `${Math.random() * 12 + 8}px`,
+              opacity: Math.random() * 0.6 + 0.4,
             }}
           >
             ❄
@@ -163,7 +157,7 @@ export default function Timeline() {
           </h2>
           
           <div
-            className="w-24 h-px bg-gradient-to-r from-transparent via-ice-400 to-transparent mx-auto mb-6 fade-in"
+            className="w-24 h-px bg-linear-to-r from-transparent via-ice-400 to-transparent mx-auto mb-6 fade-in"
             style={{ animationDelay: '0.6s', opacity: 0 }}
           />
 
@@ -204,7 +198,7 @@ export default function Timeline() {
                   </div>
 
                   {/* Center dot */}
-                  <div className="relative z-10 mx-4 flex-shrink-0">
+                  <div className="relative z-10 mx-4 shrink-0">
                     <div className="w-5 h-5 bg-ice-400 border-4 border-slate-900 rounded-full glow-pulse"></div>
                   </div>
 
@@ -222,7 +216,7 @@ export default function Timeline() {
 
                 {/* Mobile layout */}
                 <div className="md:hidden flex items-start">
-                  <div className="relative w-16 flex justify-center flex-shrink-0">
+                  <div className="relative w-16 flex justify-center shrink-0">
                     <div className="w-4 h-4 bg-ice-400 border-4 border-slate-900 rounded-full glow-pulse mt-2"></div>
                   </div>
                   <div className="flex-1">

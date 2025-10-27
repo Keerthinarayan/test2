@@ -218,6 +218,68 @@ export default function StudentInnovation() {
             </div>
           </div>
 
+          {/* Student Testimonials */}
+          <div className="bg-slate-900/30 border-2 border-slate-800 p-8 mb-12 backdrop-blur-sm fade-in">
+            <h2 className="text-3xl font-bold mb-8 text-center text-slate-100 tracking-wide winter-glow">Student Testimonials</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-slate-800/40 border border-slate-700 p-6 hover:border-slate-600 transition-all duration-300">
+                <div className="flex items-start mb-4">
+                  <div className="text-4xl mr-4">👤</div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-slate-200">Priya Sharma</h3>
+                    <p className="text-sm text-slate-400">3rd Year, Electronics Engineering</p>
+                  </div>
+                </div>
+                <p className="text-slate-300 italic mb-3">
+                  "IEEE support was a game-changer for my IoT-based smart agriculture project. The funding helped me purchase sensors and microcontrollers I couldn't afford, and the mentorship guided me through complex challenges. My project is now being implemented in local farms!"
+                </p>
+                <div className="text-yellow-500 text-sm">★★★★★</div>
+              </div>
+
+              <div className="bg-slate-800/40 border border-slate-700 p-6 hover:border-slate-600 transition-all duration-300">
+                <div className="flex items-start mb-4">
+                  <div className="text-4xl mr-4">👤</div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-slate-200">Rahul Desai</h3>
+                    <p className="text-sm text-slate-400">2nd Year, Computer Science</p>
+                  </div>
+                </div>
+                <p className="text-slate-300 italic mb-3">
+                  "Coming from a rural background, I never thought I could build an AI-powered healthcare diagnostics tool. IEEE provided everything—funds, lab access, and expert guidance. Today, my project won the regional innovation award!"
+                </p>
+                <div className="text-yellow-500 text-sm">★★★★★</div>
+              </div>
+
+              <div className="bg-slate-800/40 border border-slate-700 p-6 hover:border-slate-600 transition-all duration-300">
+                <div className="flex items-start mb-4">
+                  <div className="text-4xl mr-4">👤</div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-slate-200">Ananya Patel</h3>
+                    <p className="text-sm text-slate-400">3rd Year, Mechanical Engineering</p>
+                  </div>
+                </div>
+                <p className="text-slate-300 italic mb-3">
+                  "The 3D printing facilities and technical workshops through IEEE helped me prototype my sustainable energy device. The networking opportunities connected me with industry professionals who are now helping me patent my innovation!"
+                </p>
+                <div className="text-yellow-500 text-sm">★★★★★</div>
+              </div>
+
+              <div className="bg-slate-800/40 border border-slate-700 p-6 hover:border-slate-600 transition-all duration-300">
+                <div className="flex items-start mb-4">
+                  <div className="text-4xl mr-4">👤</div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-slate-200">Arjun Kumar</h3>
+                    <p className="text-sm text-slate-400">2nd Year, Civil Engineering</p>
+                  </div>
+                </div>
+                <p className="text-slate-300 italic mb-3">
+                  "Without IEEE support, my low-cost water purification system would have remained just an idea. The mentorship taught me how to think like an engineer, and the resources turned my concept into a working prototype that's now being tested in communities!"
+                </p>
+                <div className="text-yellow-500 text-sm">★★★★★</div>
+              </div>
+            </div>
+          </div>
+
           {/* Call to Action */}
           <div className="text-center fade-in">
             <h2 className="text-3xl font-bold mb-6 text-slate-100 tracking-wide winter-glow">Ready to Innovate?</h2>

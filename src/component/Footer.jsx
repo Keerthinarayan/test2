@@ -45,6 +45,7 @@ export default function Footer() {
     { name: 'Home', path: '/' },
     { name: 'Timeline', path: '/timeline' },
     { name: 'Problem Statements', path: '/problems' },
+    { name: 'Student Innovation', path: '/student-innovation' },
     { name: 'Gallery', path: '/gallery' },
     { name: 'FAQ', path: '/faq' },
     { name: 'Register', path: '/register' },

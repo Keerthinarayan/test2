@@ -700,32 +700,6 @@ export default function ProblemStatements() {
       ))}
 
       <div className="container mx-auto px-4 relative z-10">
-        {/* Student Innovation Banner */}
-        <div className="mb-12 fade-in">
-          <Link to="/student-innovation">
-            <div className="bg-gradient-to-r from-ice-400/20 via-ice-300/10 to-ice-400/20 border-2 border-ice-400/50 p-6 md:p-8 hover:border-ice-300 transition-all duration-300 group cursor-pointer backdrop-blur-sm">
-              <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-                <div className="flex items-center gap-4">
-                  <div className="text-4xl md:text-5xl">💡</div>
-                  <div className="text-center md:text-left">
-                    <h2 className="text-2xl md:text-3xl font-bold text-slate-100 mb-2 group-hover:text-ice-200 transition-colors duration-300">
-                      Got Your Own Innovation?
-                    </h2>
-                    <p className="text-slate-300 text-sm md:text-base">
-                      2nd & 3rd year students with exceptional projects can apply for IEEE support • Mentorship • Funding • Resources
-                    </p>
-                  </div>
-                </div>
-                <div className="shrink-0">
-                  <span className="px-6 py-3 bg-slate-800 border-2 border-ice-400/50 text-slate-100 font-bold tracking-wider group-hover:bg-slate-700 group-hover:border-ice-300 transition-all duration-300 inline-block">
-                    APPLY NOW →
-                  </span>
-                </div>
-              </div>
-            </div>
-          </Link>
-        </div>
-
         {/* Header */}
         <div className="text-center mb-16 fade-in">
           <div className="mb-6 flex justify-center">

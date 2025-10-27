@@ -29,9 +29,49 @@ export default function WinterOfProjects() {
         .fade-in {
           animation: fadeIn 1.5s ease-out forwards;
         }
+
+        @keyframes snowfall {
+          0% { 
+            transform: translateY(-10vh) translateX(0) rotate(0deg); 
+            opacity: 1; 
+          }
+          100% { 
+            transform: translateY(100vh) translateX(20px) rotate(360deg); 
+            opacity: 0.7; 
+          }
+        }
+
+        .snowflake {
+          position: absolute;
+          top: -10vh;
+          color: white;
+          font-size: 1.5em;
+          animation: snowfall linear infinite;
+          pointer-events: none;
+          z-index: 100;
+          text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+          user-select: none;
+        }
       `}</style>
 
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80 z-0"></div>
+      {/* Snowfall Effect - Improved visibility */}
+      {[...Array(50)].map((_, i) => (
+        <div
+          key={i}
+          className="snowflake"
+          style={{
+            left: `${Math.random() * 100}%`,
+            animationDuration: `${Math.random() * 8 + 5}s`,
+            animationDelay: `${Math.random() * 5}s`,
+            fontSize: `${Math.random() * 12 + 10}px`,
+            opacity: Math.random() * 0.3 + 0.7,
+          }}
+        >
+          ❄
+        </div>
+      ))}
+
+      <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/50 to-black/80 z-0"></div>
 
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 py-8 text-center">
         {/* Direwolf Icon */}
